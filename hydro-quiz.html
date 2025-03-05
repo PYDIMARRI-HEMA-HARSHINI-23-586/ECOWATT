@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hydro Energy Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .quiz-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        max-width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+      }
+
+      .quiz-container p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .quiz-container input {
+        margin: 5px;
+      }
+
+      .submit-btn {
+        background-color: #074952;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .submit-btn:hover {
+        background-color: #046b74;
+      }
+
+      #hydro-quiz-result {
+        font-size: 20px;
+        font-weight: bold;
+        color: #074952;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Hydro Energy Quiz</h1></header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+      </ul>
+    </nav>
+
+    <div class="quiz-container">
+      <form id="hydro-quiz">
+        <p>1. What is hydro energy primarily generated from?</p>
+        <input type="radio" name="q1" value="water" /> Flowing Water<br />
+        <input type="radio" name="q1" value="sunlight" /> Sunlight<br />
+
+        <p>
+          2. What is the most common structure used for hydroelectric power?
+        </p>
+        <input type="radio" name="q2" value="dam" /> Dams<br />
+        <input type="radio" name="q2" value="windmill" /> Windmills<br />
+
+        <p>3. What is an advantage of hydro energy?</p>
+        <input type="radio" name="q3" value="renewable" /> It is renewable<br />
+        <input type="radio" name="q3" value="polluting" /> It causes a lot of
+        pollution<br />
+
+        <p>4. Which is the largest hydroelectric dam in the world?</p>
+        <input type="radio" name="q4" value="three_gorges" /> Three Gorges Dam,
+        China<br />
+        <input type="radio" name="q4" value="hoover" /> Hoover Dam, USA<br />
+
+        <p>5. What type of energy is produced from hydro energy?</p>
+        <input type="radio" name="q5" value="electrical" /> Electrical Energy<br />
+        <input type="radio" name="q5" value="chemical" /> Chemical Energy<br />
+
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="checkQuiz('hydro-quiz', ['water', 'dam', 'renewable', 'three_gorges', 'electrical'])"
+        >
+          Submit
+        </button>
+      </form>
+
+      <p id="hydro-quiz-result"></p>
+    </div>
+  </body>
+</html>

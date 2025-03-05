@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solar Energy Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .quiz-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        max-width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+      }
+
+      .quiz-container p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .quiz-container input {
+        margin: 5px;
+      }
+
+      .submit-btn {
+        background-color: #074952;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .submit-btn:hover {
+        background-color: #046b74;
+      }
+
+      #solar-quiz-result {
+        font-size: 20px;
+        font-weight: bold;
+        color: #074952;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Solar Energy Quiz</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+      </ul>
+    </nav>
+
+    <div class="quiz-container">
+      <form id="solar-quiz">
+        <p>1. What device is used to capture solar energy?</p>
+        <input type="radio" name="q1" value="solar_panel" /> Solar Panel<br />
+        <input type="radio" name="q1" value="wind_turbine" /> Wind Turbine<br />
+
+        <p>2. What is the main component of solar panels?</p>
+        <input type="radio" name="q2" value="silicon" /> Silicon<br />
+        <input type="radio" name="q2" value="copper" /> Copper<br />
+
+        <p>
+          3. What percentage of sunlight can be converted into electricity by
+          modern solar panels?
+        </p>
+        <input type="radio" name="q3" value="15-22" /> 15-22%<br />
+        <input type="radio" name="q3" value="50-60" /> 50-60%<br />
+
+        <p>4. Which of the following is an advantage of solar energy?</p>
+        <input type="radio" name="q4" value="renewable" /> It is renewable<br />
+        <input type="radio" name="q4" value="expensive" /> It is very expensive
+        to use<br />
+
+        <p>5. Which country is the largest producer of solar energy?</p>
+        <input type="radio" name="q5" value="china" /> China<br />
+        <input type="radio" name="q5" value="usa" /> USA<br />
+
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="checkQuiz('solar-quiz', ['solar_panel', 'silicon', '15-22', 'renewable', 'china'])"
+        >
+          Submit
+        </button>
+      </form>
+
+      <p id="solar-quiz-result"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("n1.jpeg"); /* Correct URL */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+/* Header Styling */
+header {
+  background: linear-gradient(
+    to right,
+    #074952,
+    #60b8a4
+  ); /* Smooth gradient effect */
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+header h1 {
+  margin-bottom: 20px; /* Adds space between heading and nav */
+}
+/* Navigation Bar */
+nav {
+  position: absolute;
+  top: 90px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 100;
+  margin-top: 10px;
+}
+
+/* Navigation List */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Arrange items in a row */
+  gap: 50px; /* Adds spacing between items */
+}
+
+/* Navigation Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 10px;
+  background: linear-gradient(
+    to right,
+    #046b74,
+    #08959d
+  ); /* Gradient for 3D effect */
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 0.2s ease, background 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+nav a:hover {
+  background: linear-gradient(
+    to right,
+    #08959d,
+    #046b74
+  ); /* Reversed gradient */
+  transform: scale(1.1); /* Slight pop effect */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #074952;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.button-container {
+  text-align: center; /* Centers the buttons */
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #074952; /* Green color */
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #074952; /* Darker green when hovered */
+}
+
+/* Section Styling */
+
+.text-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Transparent white for readability */
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.quiz-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #074952; /* Dark Green */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #046b74; /* Slightly lighter green */
+}
+.text-container h2 {
+  text-align: center; /* Only center the headings */
+}
+
+.text-container p,
+.text-container ul {
+  text-align: left; /* Keep paragraphs and lists left-aligned */
+}
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 10%;
+}
+.chatbot-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #074952;
+  color: white;
+  padding: 8px 15px; /* Reduced size */
+  font-size: 14px; /* Smaller font */
+  border-radius: 20px; /* Keeps it rounded */
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.chatbot-button:hover {
+  background: #046b74;
+}

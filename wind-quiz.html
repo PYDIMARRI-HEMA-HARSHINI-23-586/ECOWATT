@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wind Energy Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .quiz-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        max-width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+      }
+
+      .quiz-container p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .quiz-container input {
+        margin: 5px;
+      }
+
+      .submit-btn {
+        background-color: #074952;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .submit-btn:hover {
+        background-color: #046b74;
+      }
+
+      #wind-quiz-result {
+        font-size: 20px;
+        font-weight: bold;
+        color: #074952;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Wind Energy Quiz</h1></header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+      </ul>
+    </nav>
+
+    <div class="quiz-container">
+      <form id="wind-quiz">
+        <p>
+          1. What is the main device used to convert wind energy into
+          electricity?
+        </p>
+        <input type="radio" name="q1" value="wind_turbine" /> Wind Turbine<br />
+        <input type="radio" name="q1" value="solar_panel" /> Solar Panel<br />
+
+        <p>2. What type of energy does wind energy originate from?</p>
+        <input type="radio" name="q2" value="solar" /> Solar Energy<br />
+        <input type="radio" name="q2" value="fossil" /> Fossil Fuels<br />
+
+        <p>3. What is the main disadvantage of wind energy?</p>
+        <input type="radio" name="q3" value="intermittent" /> It is
+        intermittent<br />
+        <input type="radio" name="q3" value="nonrenewable" /> It is
+        non-renewable<br />
+
+        <p>4. Which country produces the most wind energy?</p>
+        <input type="radio" name="q4" value="china" /> China<br />
+        <input type="radio" name="q4" value="india" /> India<br />
+
+        <p>5. What is a group of wind turbines called?</p>
+        <input type="radio" name="q5" value="wind_farm" /> Wind Farm<br />
+        <input type="radio" name="q5" value="power_plant" /> Power Plant<br />
+
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="checkQuiz('wind-quiz', ['wind_turbine', 'solar', 'intermittent', 'china', 'wind_farm'])"
+        >
+          Submit
+        </button>
+      </form>
+
+      <p id="wind-quiz-result"></p>
+    </div>
+  </body>
+</html>
